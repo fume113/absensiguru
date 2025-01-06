@@ -1,0 +1,291 @@
+.table {
+  flex: 0 0 48%; /* Lebar tabel sekitar 48% dari container */
+}
+
+.table-responsive::-webkit-scrollbar {
+  display: none; /* Untuk Safari dan Chrome */
+}
+
+.navbar {
+  background-color: #759ac5;
+}
+
+.footer {
+  background-color: #759ac5;
+}
+
+/* Import the custom OTF font */
+@font-face {
+  font-family: "Gilgan";
+  src: url("../font/Gilgan.otf") format("opentype");
+  /* Add more src formats if needed */
+}
+
+/* Apply the custom font to the desired elements */
+.navbar-text {
+  font-family: "Gilgan", sans-serif;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+/* Tambahkan kelas img-fluid pada gambar */
+.navbar-brand img.img-fluid {
+  margin-right: 20px;
+}
+
+.navbar-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Menggeser ke kiri */
+}
+
+.navbar-text .school-name {
+  margin-bottom: 5px;
+}
+
+.custom-button {
+  background-color: #007bff; /* Change to your preferred background color */
+  border: 1px solid #007bff; /* Add a border to the button */
+  color: #fff; /* Text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.custom-button:hover {
+  background-color: #0056b3; /* Change to a darker color on hover */
+}
+
+/* Style for the modal content */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center-align the content */
+}
+
+/* Style for the form labels and inputs */
+.modal-content label {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left; /* Left-align the labels */
+}
+
+.modal-content input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Style for the close button */
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+body {
+  font-family: calibri;
+}
+
+#calendar-outer {
+  width: 574px;
+}
+
+#calendar-outer ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+#calendar-outer ul li {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.prev {
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+}
+
+.next {
+  display: inline-block;
+  float: right;
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+  background: #ff8e8e;
+}
+
+div.calendar-nav {
+  background-color: #ff8e8e;
+  border-radius: 4px;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+#calendar-outer .week-name-title li {
+  display: inline-block;
+  padding: 10px 27px;
+  color: #90918b;
+  font-size: 0.95em;
+  font-weight: 600;
+}
+
+.week-day-cell li {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+  vertical-align: middle;
+  background-color: #f6ffc6;
+  color: #ff8e8e;
+  border: 1px solid #f1f0f0;
+  border-radius: 4px;
+  font-size: 1.2em;
+}
+#body-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#body-overlay div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -32px;
+  margin-left: -32px;
+}
+
+/*  -----Popup Login----- */
+* {
+  box-sizing: border-box;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+/* CSS untuk mengatur kalender ke tengah layar */
+#calendar-html-output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Set tinggi elemen ke 100% dari tinggi viewport */
+  font-size: 14px; /* Sesuaikan dengan ukuran teks yang Anda inginkan */
+}
+
+@media (max-width: 768px) {
+  #calendar-html-output {
+    flex-direction: column; /* Tampilkan kalender secara vertikal */
+  }
+}
+
+.delete-button {
+  width: 100%; /* Membuat tombol full-width */
+  text-align: center; /* Mengatur teks tombol ke tengah */
+}
+
+.colored-toast.swal2-icon-success {
+  background-color: #a5dc86 !important;
+}
+
+.colored-toast.swal2-icon-error {
+  background-color: #f27474 !important;
+}
+
+.colored-toast.swal2-icon-warning {
+  background-color: #f8bb86 !important;
+}
+
+.colored-toast.swal2-icon-info {
+  background-color: #3fc3ee !important;
+}
+
+.colored-toast.swal2-icon-question {
+  background-color: #87adbd !important;
+}
+
+.colored-toast .swal2-title {
+  color: white;
+}
+
+.colored-toast .swal2-close {
+  color: white;
+}
+
+.colored-toast .swal2-html-container {
+  color: white;
+}
